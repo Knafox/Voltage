@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InkeepersJourney.Objects.Furniture
+namespace InkeepersJourney.Objects.Customers
 {
-    internal interface IFurniture
+    internal interface ICustomer
     {
     }
 }
