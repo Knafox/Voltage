@@ -1,0 +1,5 @@
+
+# Ignored Folders
+.vs/
+bin/
+obj/
