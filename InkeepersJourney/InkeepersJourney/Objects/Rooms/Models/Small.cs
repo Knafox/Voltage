@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace InkeepersJourney.Objects.Rooms
 {
-    internal class Large: Room
+    internal class Small: Room
     {
-        public Large()
+        public Small(int id) : base(id)
         {
-            Sleeps = 3;
+            Sleeps = 1;
         }
     }
 }

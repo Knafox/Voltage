@@ -5,4 +5,12 @@
     <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
     <ActiveDebugProfile>Windows Machine</ActiveDebugProfile>
   </PropertyGroup>
+  <ItemGroup>
+    <MauiXaml Update="Objects\Customers\Views\CustomerView.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Objects\Rooms\Views\RoomView.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+  </ItemGroup>
 </Project>
