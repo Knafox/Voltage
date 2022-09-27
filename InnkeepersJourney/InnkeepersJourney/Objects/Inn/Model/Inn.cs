@@ -12,9 +12,9 @@ namespace InnkeepersJourney.Objects.Inn
         {
             //Base Level settings
             rooms = new List<IRoom> {
-                new Individual(),
-                new Individual(),
-                new Individual()
+                new Small(0),
+                new Small(1),
+                new Small(2)
             };
             
             

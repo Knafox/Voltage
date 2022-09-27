@@ -4,5 +4,6 @@
     {
         public int Sleeps { get; set; }
         public string Name { get; set; }
+        public static int Id { get; }
     }
 }

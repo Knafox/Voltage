@@ -2,7 +2,7 @@
 
 namespace InnkeepersJourney.Objects.Rooms
 {
-    internal class Room
+    internal class Room: IRoom
     {
         public Room(int id)
         {
@@ -16,7 +16,7 @@ namespace InnkeepersJourney.Objects.Rooms
 
         public string Status { get; set; }
 
-        Customer AssignedCustomer { get; set; }
+        public Customer AssignedCustomer { get; set; }
 
         public override string ToString()
         {

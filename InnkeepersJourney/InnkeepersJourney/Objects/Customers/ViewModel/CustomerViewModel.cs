@@ -5,17 +5,32 @@ namespace InnkeepersJourney.Objects.Customers
 {
     public partial class CustomerViewModel: ObservableObject
     {
-        [ObservableProperty]
-        public int sleeps = 1;
+        ICustomer _customer;
 
         [ObservableProperty]
-        public string name = "Test Name 567";
+        string name;
+
+        [ObservableProperty]
+        int sleeps;
 
         public CustomerViewModel()
         {
-            sleeps = 2;
-            name = "Test Name 123";
-            Debugger.Break();
+
         }
+
+        public CustomerViewModel(ICustomer customer)
+        {
+            ICustomer _customer = customer;
+            name = _customer.Name;
+            sleeps = _customer.Sleeps;
+        }
+
+        public void UpdateCustomer(ICustomer customer)
+        {
+            ICustomer _customer = customer;
+            name = _customer.Name;
+            sleeps = _customer.Sleeps;
+        }
+
     }
 }
