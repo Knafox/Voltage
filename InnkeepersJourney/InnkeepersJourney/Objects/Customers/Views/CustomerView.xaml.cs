@@ -6,14 +6,13 @@ public partial class CustomerView : ContentView
     public CustomerView()
     {
         InitializeComponent();
-        CustomerViewModel customerViewModel = new();
-        BindingContext = customerViewModel;
+        CustomerViewModel viewModel = new CustomerViewModel();
+        this.BindingContext = viewModel;
     }
 
-    public CustomerView(CustomerViewModel customerViewModel)
-	{
-		InitializeComponent();
-        BindingContext = customerViewModel;
+    public void UpdateCustomerViewModel(CustomerViewModel viewModel)
+    {
+        this.BindingContext = viewModel;
     }
 
 }

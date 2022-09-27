@@ -1,9 +1,11 @@
 ﻿
+using CommunityToolkit.Mvvm.ComponentModel;
+
 namespace InnkeepersJourney.Objects.Customers
 {
-    public class Customer : ICustomer
+    public class Customer :  ObservableObject, ICustomer
     {
-        int _count = 0;
+
         public Customer()
         {
             Name = GetRandomName();
@@ -16,21 +18,7 @@ namespace InnkeepersJourney.Objects.Customers
 
         public string GetRandomName()
         {
-            string[] names = new string[]
-            {
-                "Isabel Mackenzie",
-                "Adrian Feldman",
-                "Kade Bruce",
-                "Darrin Hostetler",
-                "Cyrus Glick",
-                "Baylor Marcus",
-                "Donnell Ridgeway",
-                "Demond Muller",
-                "Nayeli Roman",
-                "Shea Davey"
-            };
-            _count++;
-            return names[_count-1];
+            return "Isabel Mackenzie";
         }
     }
 }

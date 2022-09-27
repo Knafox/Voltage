@@ -20,7 +20,7 @@ public partial class MainPage : ContentPage
         customers.Add(new Individual());
         customers.Add(new Individual());
         CustomerViewModel test = new();
-        CustomerView CustomerView = new(test);
+        CustomerView CustomerView = new();
         customerView = CustomerView;
     }
 

@@ -18,12 +18,6 @@ namespace InnkeepersJourney.Objects.Customers
 
         }
 
-        public CustomerViewModel(ICustomer customer)
-        {
-            ICustomer _customer = customer;
-            name = _customer.Name;
-            sleeps = _customer.Sleeps;
-        }
 
         public void UpdateCustomer(ICustomer customer)
         {

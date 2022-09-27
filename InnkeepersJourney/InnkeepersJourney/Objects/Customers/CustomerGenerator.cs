@@ -7,7 +7,7 @@ namespace InnkeepersJourney.Objects.Customers
         int day = 1;
         static Random random;
         Dictionary<int,int> weights;
-        int totalWeight = 1;
+        int totalWeight;
 
         public CustomerGenerator()
         {
@@ -16,20 +16,23 @@ namespace InnkeepersJourney.Objects.Customers
             weights.Add(Individual.Id, 80);
             weights.Add(Couple.Id, 15);
             weights.Add(Family.Id, 5);
+            totalWeight = 100;
         }
 
         public IList<ICustomer> GetDailyCustomers()
         {
-            int customerCount = 2 + random.Next(1, day/10) + day/20;
-
+            int customerCount = (int)Math.Round(2.0 + (double)random.Next(1, day)/10 + (double)day /20);
+            Console.WriteLine(customerCount);
             List<ICustomer> output = new List<ICustomer>();
 
             for(int i = 0; i < customerCount; i++){
                 int randomCustomer = random.Next(1,totalWeight);
-                foreach ( KeyValuePair<int,int> weight in weights)
+                foreach (KeyValuePair<int, int> weight in weights)
                 {
-                    if (randomCustomer < weight.Value)
+                    if (randomCustomer < weight.Value){
                         output.Add(createCustomerfromId(weight.Key));
+                        break;
+                    }
                 }
             }
 
@@ -45,7 +48,7 @@ namespace InnkeepersJourney.Objects.Customers
                 return new Couple();
             if(Id == Family.Id)
                 return new Family();
-             throw new NotImplementedException();
+            throw new NotImplementedException();
             
         }
     }

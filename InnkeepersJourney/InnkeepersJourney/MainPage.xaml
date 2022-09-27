@@ -17,12 +17,6 @@
             Padding="30,0"
             VerticalOptions="Center">
 
-            <Label
-                Text="Current Customer"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
             <customers:CustomerView x:Name="customerView"/>
 
         </VerticalStackLayout>
